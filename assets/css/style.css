@@ -33,3 +33,18 @@
     padding-bottom: -30px;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f83142, 0 0 30px #f83142, 0 0 40px #f83142, 0 0 55px #f83142, 0 0 75px #f83142;
 }
+
+
+#attack {
+    background-color: gold ;
+}
+
+#attack:hover {
+    background-color: red ;
+    color: #fff;
+    cursor: pointer
+}
+
+.custom-cur {
+    cursor: url('/assets/images/sword.png');
+  }
