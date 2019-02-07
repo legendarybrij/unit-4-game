@@ -1,0 +1,35 @@
+#backbox {
+    background: url(../images/starwars.gif) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 50vw;
+    
+    
+}
+#hero {
+    height:100px;
+}
+#yourCharacter {
+    color:#0a4092f8;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #31f852, 0 0 30px #31f852, 0 0 40px #ebf831, 0 0 55px #e46d0d, 0 0 75px #d80aa5;
+}
+.row {
+    color:#e2243d;
+    margin-left:10px;
+    font-family: Impact, sans-serif;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f83142, 0 0 30px #f83142, 0 0 40px #f83142, 0 0 55px #f83142, 0 0 75px #f83142;
+}
+
+#heading {
+    font-size: 5vw;
+    color:#d7f3f3;
+    font-display: auto;
+    font-weight: bolder;
+    font-family: 'Neon', Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    text-align: right;
+    margin-top: auto;
+    padding-bottom: -30px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f83142, 0 0 30px #f83142, 0 0 40px #f83142, 0 0 55px #f83142, 0 0 75px #f83142;
+}
