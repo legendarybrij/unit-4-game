@@ -8,27 +8,41 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script src="assets/javascript/game.js"></script>
 </head>
 <body>
-   <div class="container-fluid col-md-12" id="backbox">
+   <div class="col-md-12" id="backbox">
    
     <div class="row"> 
         <div class="col-md-12" id="heading">Star Wars RPG!</div>
     </div>
-    <div class="row" id="allCharacters"> </div>
+    <div class="row all" id="allCharacters">
+       <div class="darth-d" id=darth><img class="img-thumbnail darth-vader" src="assets/images/darth.jpeg" alt="Darth Vader"> </div>
+        <div class="luke-s" id="luke"> <img class="img-thumbnail luke-skywalker" src="assets/images/luke.jpg" alt="Luke Skywalker"> </div>
+        <div class="yoda-y" id="yoda"> <img class="img-thumbnail yoda-yoda" src="assets/images/yoda.gif" alt="Yoda"> </div>
+        <div class="han-s" id="han"> <img class="img-thumbnail han-solo" src="assets/images/han.jpg" alt="Han Solo"> </div>
+    </div>
     <div class="row" id="yourCharacter">Your Character </div>
-    <div class="row" id="hero"> </div>
+    <div class="current" id="hero"> </div>
+    <div class="row">&nbsp </div>
+
     <div class="row" >Enemies Available To Attack </div>
-    <div class="row" id="allEnemy"> </div>
+    <div class="enemy1"> </div>
+    <div class="enemy2"> </div>
+   <div class="enemy3"> </div>
+    <div class="row">&nbsp </div>
+
     <div class="row">Fight Section </div>
     <div class="row">
-        <button id="attack">Attack</button> </div>
+
+    <button id="attack">Attack</button> </div>
+
     <div class="row">Defender </div>
-    <div class="row" id="currentEnemy"> </div>
+    <div class="row defender" id="currentEnemy"> </div>
 
     </div>
 

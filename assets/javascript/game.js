@@ -1,3 +1,4 @@
+//import { isValidLiteralValue } from "graphql";
 
 
 // 1) Display four thumbmail of Star Wars Characters in document.ready function
@@ -19,4 +20,115 @@
 //14) Repeat Step 4 until one of the character looses.
 //15) If your character's health remains above zero then wins & Game Over
 
+var clickedYour = "";
+    var enemy = "";
+    var darthHp = Math.floor((Math.random())*100) + 102;
+    var lukeHp  = Math.floor((Math.random())*100) + 102;
+    var yodaHp  = Math.floor((Math.random())*100) + 102;
+    var hanHp   = Math.floor((Math.random())*100) + 102;
 
+$(document).ready(function(){
+    
+console.log("Darth = "+darthHp+ " Luke = "+lukeHp+" Yoda = "+yodaHp+ " Han = "+hanHp)
+    $("#darth").on("click", function() {
+
+        $("#darth").clone().appendTo( ".current" );
+        $("#darth").hide();
+        $("#luke").clone().appendTo( ".enemy1" );
+        $("#yoda").clone().appendTo( ".enemy2" );
+        $("#han").clone().appendTo( ".enemy3" );
+        $("#allCharacters").hide();
+        clickedYour="darth";
+      });     
+    
+      $("#luke").on("click", function() {
+        
+        $("#luke").clone().appendTo( ".current" );
+        $("#luke").hide();
+        $("#darth").clone().appendTo( ".enemy1" );
+        $("#yoda").clone().appendTo( ".enemy2" );
+        $("#han").clone().appendTo( ".enemy3" );
+        $("#allCharacters").hide();
+        clickedYour="luke";
+      }); 
+
+      $("#yoda").on("click", function() {
+        
+        $("#yoda").clone().appendTo( ".current" );
+        $("#yoda").hide();
+        $("#darth").clone().appendTo( ".enemy1" );
+        $("#luke").clone().appendTo( ".enemy2" );
+        $("#han").clone().appendTo( ".enemy3" );
+        $("#allCharacters").hide();
+        clickedYour="yoda";
+      }); 
+
+      
+
+      $("#han").on("click", function() {
+        
+        $("#han").clone().appendTo( ".current" );
+        $("#han").hide();
+        $("#darth").clone().appendTo( ".enemy1" );
+        $("#luke").clone().appendTo( ".enemy2" );
+        $("#yoda").clone().appendTo( ".enemy3" );
+        $("#allCharacters").hide();
+        clickedYour="han";
+      }); 
+
+
+      $(".enemy1").on("click", function() {
+        if(clickedYour==="darth")
+        {
+            $("#luke").clone().appendTo(".defender");
+            $(".enemy1").hide();
+            enemy = "luke"
+        }else if(clickedYour==="luke" || clickedYour==="yoda" || clickedYour==="han")
+        {
+            $("#darth").clone().appendTo(".defender");
+            $(".enemy1").hide();
+            enemy = "darth"
+        }
+      });
+
+
+      $(".enemy2").on("click", function() {
+        if(clickedYour==="darth" || clickedYour==="luke")
+        {
+            $("#yoda").clone().appendTo(".defender");
+            $(".enemy2").hide();
+            enemy = "yoda"
+        }else if (clickedYour==="yoda"|| clickedYour==="han")  
+        {
+            $("#luke").clone().appendTo(".defender");
+            $(".enemy2").hide();
+            enemy = "luke"
+        }
+
+      });
+
+      $(".enemy3").on("click", function() {
+        if(clickedYour==="darth" || clickedYour==="luke" || clickedYour==="yoda")
+        {
+            $("#han").clone().appendTo(".defender");
+            $(".enemy3").hide();
+            enemy = "han"
+        }else if ( clickedYour==="han")  
+        {
+            $("#yoda").clone().appendTo(".defender");
+            $(".enemy3").hide();
+            enemy = "yoda"
+        }
+
+      });
+     
+      
+});
+
+var game={ 
+        health: 0,
+
+        
+    
+
+    };

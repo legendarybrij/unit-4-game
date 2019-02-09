@@ -4,13 +4,15 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 50vw;
-    
-    
+    height: 700px;  
 }
 #hero {
     height:100px;
 }
+.img-thumbnail {
+    background-color: #31f852;
+}
+
 #yourCharacter {
     color:#0a4092f8;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #31f852, 0 0 30px #31f852, 0 0 40px #ebf831, 0 0 55px #e46d0d, 0 0 75px #d80aa5;
@@ -45,6 +47,38 @@
     cursor: pointer
 }
 
-.custom-cur {
+/*.custom-cur {
     cursor: url('/assets/images/sword.png');
-  }
+  }*/
+
+#darth, #luke {
+    width: 15vw;
+}
+
+
+#yoda {
+    width: 15.3vw;
+}
+
+#han {
+    width: 15.1vw;
+}
+
+.enemy1 {
+    width:15vw;
+    display:inline-block;
+    
+}
+.enemy2 {
+    width:15vw;
+    display:inline-block;
+}
+
+.enemy3 {
+    width:15.1vw;
+    display:inline-block;
+}
+
+.enemy1.img-thumbnail {
+    background-color:red;
+}
