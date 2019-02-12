@@ -37,12 +37,36 @@
     var enemyHealth = 1;
  
 $(document).ready(function(){
+   
+              game();
+              restart();
+                          
+              
+                
+      
+});
+
+
+
+function restart() {
+
+$(".restart").on("click", function() {
+    location.reload();
+   }); 
+}
+
+
+
+function game() {
+
+                   
+
     yourAttack = Math.floor((Math.random())* 20) + 10;
     enemyAttack = Math.floor((Math.random())* 20) + 20;
     $(".enemy1").hide(); $(".enemy2").hide(); $(".enemy3").hide(); $(".myHero").hide();$(".currentEnemy").hide();
-console.log("Darth = "+darthHp+ " Luke = "+lukeHp+" Yoda = "+yodaHp+ " Han = "+hanHp);
-console.log("YourAttack = "+yourAttack + " EnemyAttack = "+enemyAttack);
-
+    //console.log("Darth = "+darthHp+ " Luke = "+lukeHp+" Yoda = "+yodaHp+ " Han = "+hanHp);
+    //console.log("YourAttack = "+yourAttack + " EnemyAttack = "+enemyAttack);
+    $(".restart").hide();
     document.getElementById("darthHp").innerHTML = darthHp;
     document.getElementById("lukeHp").innerHTML = lukeHp;
     document.getElementById("yodaHp").innerHTML = yodaHp;
@@ -193,6 +217,7 @@ console.log("YourAttack = "+yourAttack + " EnemyAttack = "+enemyAttack);
                     }else if ($(".allEnemy").find('img').length===0 && $(".currentEnemy").find('img').length===0 )
                     {
                         $(".score").text("You have cleared the arena hence you are the true Star!!");
+                        $(".restart").show();
                     }else if ($(".currentEnemy").find('img').length===0)
                     {
                         $(".score").text("Please Select Your Opponent Before Attacking");
@@ -208,7 +233,7 @@ console.log("YourAttack = "+yourAttack + " EnemyAttack = "+enemyAttack);
                         yourAttack = yourAttack + 30;
                         $(".score").text("You attacked "+ enemy+" for "+yourAttack+" Damage");
                         $("<div>").appendTo(".score").text(enemy+" attacked you back for "+enemyAttack+" Damage");
-                        console.log("yourHealth = "+yourHealth+" && enemyHealth = "+enemyHealth);
+                       // console.log("yourHealth = "+yourHealth+" && enemyHealth = "+enemyHealth);
                        
                         //document.getElementById("darthHp").innerHTML = yourHealth;
                        // document.getElementById("lukeHp").innerHTML = enemyHealth;
@@ -242,30 +267,33 @@ console.log("YourAttack = "+yourAttack + " EnemyAttack = "+enemyAttack);
                         
                     }else if (yourHealth<=0 && enemyHealth>0)
                     {
-                        $(".score").text("You Lose");
+                        $(".score").text("You have been Defeated. Game Over!!");
+                        $(".restart").show();
 
                     }else if (enemyHealth<=0 && yourHealth>0)
                     {
-                        $(".score").text("You Win");
+                        $(".score").text("You Win!! Yayyyy...!!");
                         $(".currentEnemy").empty();
                         $(".currentEnemy").hide();
                         enemyAttack = Math.floor((Math.random())* 20) + 20;
                     }else if (enemyHealth<=0 && yourHealth<=0)
                     {
-                        $(".score").text("You both are dead. Match is Draw");
+                        $(".score").text("You both are dead. Match is Draw. Game Over!!");
+                        $(".restart").show();
                        // $(".currentEnemy").empty();
                         //$(".currentEnemy").hide();          
                     }
 
                 });
-              
-      
-      //$(".currentEnemy1").remove();
-      console.log("img =" + $(".currentEnemy").find('img').length);
-      /*$(".currentEnemy1").hide();
-      $(".currentEnemy2").hide();
-      $(".currentEnemy3").hide();*/
-});
+
+                
+
+}
+
+
+
+
+
 
 /*var game={ 
        yourHp: yourHealth,

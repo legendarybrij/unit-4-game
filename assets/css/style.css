@@ -5,6 +5,7 @@
     -o-background-size: cover;
     background-size: cover;
     height: 800px;  
+    
 }
 .myHero {
     width:16.5vw;
@@ -60,6 +61,18 @@
     color: #fff;
     cursor: pointer
 }
+
+
+.restart {
+    background-color: rgb(94, 255, 0) ;
+}
+
+.restart:hover {
+    background-color: rgb(0, 204, 255) ;
+    color: #fff;
+    cursor: pointer
+}
+
 
 /*.custom-cur {
     cursor: url('/assets/images/sword.png');
