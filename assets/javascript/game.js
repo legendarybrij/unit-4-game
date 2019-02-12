@@ -61,7 +61,7 @@ function game() {
 
                    
 
-    yourAttack = Math.floor((Math.random())* 20) + 10;
+    yourAttack = Math.floor((Math.random())* 20);
     enemyAttack = Math.floor((Math.random())* 20) + 20;
     $(".enemy1").hide(); $(".enemy2").hide(); $(".enemy3").hide(); $(".myHero").hide();$(".currentEnemy").hide();
     //console.log("Darth = "+darthHp+ " Luke = "+lukeHp+" Yoda = "+yodaHp+ " Han = "+hanHp);
@@ -222,21 +222,20 @@ function game() {
                     {
                         $(".score").text("Please Select Your Opponent Before Attacking");
                     }else if (yourHealth>=0 && enemyHealth>0)
-                    {
+                    {   yourAttack = yourAttack + 20;
+                        
                         if(hero===darth) { $("#darth").text(yourHealth); } else if(hero===luke){ $("#luke").text(yourHealth); } else if(hero===yoda){ $("#yoda").text(yourHealth); } else if(hero===han){ $("#han").text(yourHealth); }
                         if(enemy===darth){ $("#darth").text(enemyHealth); } else if(enemy===luke) { $("#luke").text(enemyHealth); } else if(enemy===yoda){ $("#yoda").text(enemyHealth); } else if(enemy===han){ $("#han").text(enemyHealth); }
                        
-                        //$("#darth").append(yourHealth);
-                       // $("#darthHp").append("#hero");
+                    
                         yourHealth -= enemyAttack;
                         enemyHealth -= yourAttack;
-                        yourAttack = yourAttack + 30;
+                        
                         $(".score").text("You attacked "+ enemy+" for "+yourAttack+" Damage");
                         $("<div>").appendTo(".score").text(enemy+" attacked you back for "+enemyAttack+" Damage");
-                       // console.log("yourHealth = "+yourHealth+" && enemyHealth = "+enemyHealth);
+                      // console.log("yourHealth = "+yourHealth+" && enemyHealth = "+enemyHealth);
+                       //console.log("yourAttack= "+yourAttack+" && enemyAttack = "+enemyAttack);
                        
-                        //document.getElementById("darthHp").innerHTML = yourHealth;
-                       // document.getElementById("lukeHp").innerHTML = enemyHealth;
                         if(hero===darth)
                         {
                             document.getElementById("darthHp").innerHTML = yourHealth;
@@ -278,10 +277,8 @@ function game() {
                         enemyAttack = Math.floor((Math.random())* 20) + 20;
                     }else if (enemyHealth<=0 && yourHealth<=0)
                     {
-                        $(".score").text("You both are dead. Match is Draw. Game Over!!");
-                        $(".restart").show();
-                       // $(".currentEnemy").empty();
-                        //$(".currentEnemy").hide();          
+                        $(".score").text("You both are dead. Match is draw. Game Over!!");
+                        $(".restart").show();        
                     }
 
                 });
