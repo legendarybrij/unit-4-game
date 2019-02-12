@@ -20,30 +20,34 @@
     <div class="row"> 
         <div class="col-md-12" id="heading">Star Wars RPG!</div>
     </div>
-    <div class="row all" id="allCharacters">
-       <div class="darth-d" id=darth><img class="img-thumbnail darth-vader" src="assets/images/darth.jpeg" alt="Darth Vader"> </div>
-        <div class="luke-s" id="luke"> <img class="img-thumbnail luke-skywalker" src="assets/images/luke.jpg" alt="Luke Skywalker"> </div>
-        <div class="yoda-y" id="yoda"> <img class="img-thumbnail yoda-yoda" src="assets/images/yoda.gif" alt="Yoda"> </div>
-        <div class="han-s" id="han"> <img class="img-thumbnail han-solo" src="assets/images/han.jpg" alt="Han Solo"> </div>
+    <div class="row" id="allCharacters">
+        <button class="everyone" id=darth>Darth Vader<div class="darth-d" ><img class="img-thumbnail darth-vader" src="assets/images/darth.jpeg" alt="Darth Vader"> </div> <p id="darthHp" ></p> </button>
+        <button class="everyone" id="luke">Luke Skywalker<div class="luke-s"> <img class="img-thumbnail luke-skywalker" src="assets/images/luke.jpg" alt="Luke Skywalker"> </div><p id="lukeHp"></p></button>
+        <button class="everyone" id="yoda">Yoda<div class="yoda-y" > <img class="img-thumbnail yoda-yoda" src="assets/images/yoda.gif" alt="Yoda"></div><p id="yodaHp"></p></button>
+        <button class="everyone" id="han">Han Solo<div class="han-s" > <img class="img-thumbnail han-solo" src="assets/images/han.jpg" alt="Han Solo"> </div><p id="hanHp"></p></button>
     </div>
-    <div class="row" id="yourCharacter">Your Character </div>
-    <div class="current" id="hero"> </div>
-    <div class="row">&nbsp </div>
 
-    <div class="row" >Enemies Available To Attack </div>
-    <div class="enemy1"> </div>
-    <div class="enemy2"> </div>
-   <div class="enemy3"> </div>
+    <div class="row" id="yourCharacter">Your Character </div>
+    <button class="row myHero"><div class="currentHero" id="hero"></div><p id="yourHealth"></p></button>
+    
     <div class="row">&nbsp </div>
+    <div class="row" >Enemies Available To Attack </div>
+    <button class="row enemy1 allEnemy"><div class=""></div></button>
+    <button class="row enemy2 allEnemy"><div class=""></div></button>
+    <button class="row enemy3 allEnemy"><div class=""></div></button>
+    
 
     <div class="row">Fight Section </div>
+
     <div class="row">
 
     <button id="attack">Attack</button> </div>
-
+    
     <div class="row">Defender </div>
-    <div class="row defender" id="currentEnemy"> </div>
-
+    
+    <button class="row currentEnemy"><div class="row"></div></button>
+    <div class="row score"> </div>
+    
     </div>
 
 

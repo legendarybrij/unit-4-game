@@ -4,13 +4,27 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 700px;  
+    height: 800px;  
 }
-#hero {
-    height:100px;
+.myHero {
+    width:16.5vw;
+    height:13vw;
+    background-color: #31f852;
+    border-color: #31f852;
 }
+
+#nameOfHero{
+    margin-bottom: 0px;
+}
+
+.everyone {
+    background-color: #31f852;
+    border-color: #31f852;
+}
+
 .img-thumbnail {
     background-color: #31f852;
+    border-color: #31f852;
 }
 
 #yourCharacter {
@@ -64,21 +78,26 @@
     width: 15.1vw;
 }
 
-.enemy1 {
-    width:15vw;
+
+
+
+.enemy1, .enemy2, .enemy3, .currentEnemy {
+    width:16.5vw;
+    height:13vw;
     display:inline-block;
-    
-}
-.enemy2 {
-    width:15vw;
-    display:inline-block;
+    background-color: #f83142;
+    text-align: left;   
+    border-color: #f83142; 
 }
 
-.enemy3 {
-    width:15.1vw;
-    display:inline-block;
+p {
+    margin-bottom: 0;
 }
 
-.enemy1.img-thumbnail {
-    background-color:red;
+
+.score {
+    color:#0a920af8;
+    display:block;
+    /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #31f852, 0 0 30px #31f852, 0 0 40px #ebf831, 0 0 55px #e46d0d, 0 0 75px #d80aa5;*/
 }
+
